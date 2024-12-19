@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos globais */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('nogi4.webp') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Desfoque do fundo + camada escura */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.4); /* Adicionando camada escura */
+            z-index: -1;
+        }
+
+        /* Box centralizado */
+        .register-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        /* Estilos do formulário */
+        .register-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .register-box button {
+            width: 100%;
+            padding: 12px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .register-box button:hover {
+            background-color: #444;
+        }
+
+        /* Link de login */
+        .register-box p {
+            margin-top: 20px;
+        }
+
+        /* Estilos para as caixas de frases motivadoras */
+        .motivational-box {
+            position: absolute;
+            font-size: 18px;
+            color: #333;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            animation: float 8s infinite ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animação suave das frases */
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-10px) rotate(2deg);
+            }
+            100% {
+                transform: translateY(0) rotate(-2deg);
+            }
+        }
+
+        /* Posicionamento mais espalhado das frases */
+        .motivational-box:nth-child(1) {
+            top: 15%;
+            left: 5%;
+        }
+
+        .motivational-box:nth-child(2) {
+            top: 25%;
+            left: 75%;
+        }
+
+        .motivational-box:nth-child(3) {
+            top: 45%;
+            left: 10%;
+        }
+
+        .motivational-box:nth-child(4) {
+            top: 60%;
+            left: 70%;
+        }
+
+        .motivational-box:nth-child(5) {
+            top: 80%;
+            left: 40%;
+        }
+
+        /* Corrigindo a posição da frase "Sua força está na persistência!" */
+        .motivational-box:nth-child(5) {
+            top: 60%;
+            left: 40%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Frases motivadoras -->
+    <div class="motivational-box">"A força vem do interior!"</div>
+    <div class="motivational-box">"Vença a dor e será imbatível!"</div>
+    <div class="motivational-box">"O sucesso está em não desistir!"</div>
+    <div class="motivational-box">"A luta nunca é em vão!"</div>
+    <div class="motivational-box">"Sua força está na persistência!"</div>
+
+    <!-- Box de Registro -->
+    <div class="register-box">
+        <h1>Registro</h1>
+        <form action="register.php" method="POST">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Registrar</button>
+        </form>
+        <p>Já tem uma conta? <a href="index.html">Faça login aqui</a>.</p>
+    </div>
+
+</body>
+</html>

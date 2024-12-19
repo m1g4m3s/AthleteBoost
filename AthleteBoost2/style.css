@@ -1,0 +1,363 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Menu de navegação */
+nav {
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 0;
+    display: inline-block;
+    position: relative;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Centralizando conteúdo */
+.container {
+    margin-top: 80px; /* Espaço maior para o menu fixo */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Box de perfil */
+.profile-box {
+    background: rgba(255, 255, 255, 0.9); /* Corrigido para fundo branco */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 20px auto;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* Estilo de edição de perfil */
+.edit-profile-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 20px auto;
+}
+
+.edit-profile-box input,
+.edit-profile-box textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.edit-profile-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.edit-profile-box button:hover {
+    background-color: #444;
+}
+
+/* Caixa de texto de edição */
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Ajustes no estilo do menu para a parte da edição e visualização */
+.profile-box h1,
+.edit-profile-box h1 {
+    margin-bottom: 20px;
+}
+
+/* Personalização do conteúdo de perfil */
+.profile-details {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.profile-details label {
+    font-weight: bold;
+}
+
+.profile-details span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Caixa da mensagem na home */
+.home-message-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Corrigido para fundo branco */
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.home-message-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.home-message-box p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Botão de logout */
+.logout-button {
+    background-color: #444;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.logout-button:hover {
+    background-color: #666;
+}
+
+/* Estilo de treino */
+.treino-box {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.treino-box video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.treino-box h2 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+}
+
+.treino-box p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* Tamanho e formato do menu */
+nav a {
+    font-size: 20px;
+    padding: 15px 25px;
+}
+
+/* Outros Estilos Comuns */
+h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Animação para o movimento suave dos boxes */
+.container .profile-box, .container .edit-profile-box, .home-message-box, .treino-box {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo de painel administrativo */
+.admin-panel {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.admin-panel h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.admin-panel .users-list,
+.admin-panel .treinos-list,
+.admin-panel .tecnicas-list {
+    margin-top: 30px;
+}
+
+.admin-panel .user-box,
+.admin-panel .treino-box,
+.admin-panel .tecnico-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-panel .button-add {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.admin-panel .button-add:hover {
+    background-color: #218838;
+}
+
+.admin-panel .button-delete {
+    background-color: #dc3545;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.admin-panel .button-delete:hover {
+    background-color: #c82333;
+}
+
+/* Estilo de Técnica */
+.tecnico-box {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tecnico-box video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.tecnico-box h2 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+}
+
+.tecnico-box p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* Estilo do Formulário de Adição de Técnica */
+.admin-panel form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.admin-panel form input[type="text"],
+.admin-panel form textarea,
+.admin-panel form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.admin-panel form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.admin-panel form button:hover {
+    background-color: #444;
+}

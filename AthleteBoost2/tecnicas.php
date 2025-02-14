@@ -30,6 +30,7 @@ $tecnicas = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <a href="editar_perfil.php">Editar Perfil</a>
         <a href="tecnicas.php">Técnicas</a>
         <a href="treinos.php">Treinos</a>
+        <a href="criar_ficha.php">Criar Fichas</a>
     </nav>
 
     <div class="container">
